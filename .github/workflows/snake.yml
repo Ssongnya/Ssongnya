@@ -24,6 +24,7 @@ jobs:
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+          repository: ssongnya/ssongnya
 
       - name: Check dist folder
         run: ls -al dist
