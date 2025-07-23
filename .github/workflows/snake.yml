@@ -2,7 +2,7 @@ name: generate animation
 
 on:
   schedule:
-    - cron: "0 0 * * *" 
+    - cron: "0 0 * * *"  # 매일 자정
   workflow_dispatch:
   push:
     branches:
@@ -21,12 +21,12 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Generate github-snake-dark.svg with custom colors
-        uses: lecoqjacques/snk@main  
+        uses: Dothinking/snk@main  
         with:
           github_user_name: ssongnya
           outputs: dist/github-snake-dark.svg
-          color_snake: "#FAD267" 
-          color_dots: "#6C5D53,#9EB696,#5C6E56,#42553D,#D88382" 
+          color_snake: "#FAD267"
+          color_dots: "#6C5D53,#9EB696,#5C6E56,#42553D,#D88382"
 
       - name: Check dist folder
         run: ls -al dist
