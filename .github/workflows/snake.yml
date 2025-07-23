@@ -2,7 +2,7 @@ name: generate animation
 
 on:
   schedule:
-    - cron: "0 0 * * *"  # 매일 자정
+    - cron: "0 0 * * *"  # 매일 자정 실행
   workflow_dispatch:
   push:
     branches:
@@ -17,19 +17,21 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
     steps:
-      - name: generate github-snake-dark.svg
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Generate github-snake-dark.svg
         uses: Platane/snk@v3
         with:
           github_user_name: ssongnya
-          outputs: |
-            dist/github-snake-dark.svg
-          color_snake: "#FAD267" # 부드러운 노랑 (뱀 선 색상)
-          color_dots: "#6C5D53,#9EB696,#5C6E56,#42553D,#D88382" # 기여도 단계별 색상
+          outputs: dist/github-snake-dark.svg
+          color_snake: "#FAD267"  # 부드러운 노랑 (뱀 선 색상)
+          color_dots: "#6C5D53,#9EB696,#5C6E56,#42553D,#D88382"  # 기여도 단계별 색상 (쉼표, 공백 없음)
 
       - name: Check dist folder
         run: ls -al dist
 
-      - name: push github-snake-dark.svg to the output branch
+      - name: Push github-snake-dark.svg to output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
