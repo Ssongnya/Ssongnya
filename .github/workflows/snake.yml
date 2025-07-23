@@ -20,9 +20,11 @@ jobs:
         uses: Platane/snk@v3.2.0
         with:
           github_user_name: ssongnya
-          outputs: dist/github-snake-dark.svg
-          color_snake: "#FAD267"  # 뱀 색
-          color_dots: "#6C5D53,#9EB696,#5C6E56,#42553D,#D88382"  # 점 색
+          outputs: |
+            dist/github-snake-light.svg
+            dist/github-snake-dark.svg?palette=github-dark
+            dist/github-snake-custom.svg?color_snake=#FAD267&color_dots=#6C5D53,#9EB696,#5C6E56,#42553D,#D88382
+
       - name: Check dist folder
         run: ls -al dist
 
