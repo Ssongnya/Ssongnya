@@ -8,4 +8,5 @@
 # ![](./profile-3d-contrib/profile-night-rainbow.svg)
 <div align="center">
   <img src="https://github.com/Ssongnya/Ssongnya/blob/output/github-snake-dark.svg" />
+  <img src="https://raw.githubusercontent.com/ssongnya/ssongnya/output/dist/github-snake-custom.svg" />
 </div>
