@@ -7,6 +7,6 @@
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Ssongnya&layout=compact)
 # ![](./profile-3d-contrib/profile-night-rainbow.svg)
 <div align="center">
-  <img src="https://raw.githubusercontent.com/ssongnya/ssongnya/output/dist/github-snake-dark.svg" />
+  <img src="https://github.com/ssongnya/ssongnya/blob/output/github-contribution-grid-snake-dark.svg" />
 </div>
 
